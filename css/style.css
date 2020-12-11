@@ -1,0 +1,178 @@
+﻿@charset "utf-8";
+
+/* 基本レイアウト ここから↓ */
+@import url(common.css);
+
+
+body {
+	background-color: lightblue;
+	/*linear-gradient(to top, rgba(217, 175, 217, 0.7) 0%, rgba(151, 217, 225, 0.7) 100%);*/
+	color: #5f5039;
+	font-size: 87.5%;
+	line-height: 1.5;
+	/*background-repeat: repeat;*/
+	
+}
+header, nav, #breadcrumb, #contents, footer{
+	margin: 0 auto;
+	width: 840px;
+}
+header h1 {
+	margin: 0 0 26px 0;
+	padding-top: 28px;
+	text-align: center;
+}
+nav ul {
+	overflow: hidden;
+	margin 0 0 20pc 0;
+	padding-left: 0;
+	list-style-type: none;
+}
+nav ul li {
+	float: left;
+	width: 210px;
+}
+nav ul li a {
+	overflow: hidden;	
+	display: block;		/*ここのblock宣言によって高さを変更できるようになる。*/
+	padding-top: 44px;
+	height: 0;		/*ここで高さ０の領域なしを作っているが、上のpaddingによってリンク領域を確保している。*/
+}
+nav ul li#nav_concept a {
+	background-image: url(../images/nav1.png);
+}
+nav ul li#nav_plan a {
+	background-image: url(../images/nav2.png);
+}
+nav ul li#nav_fair a {
+	background-image: url(../images/nav3.png);
+}
+nav ul li#nav_contact a {
+	background-image: url(../images/nav4.png);
+}
+#contents {
+	overflow: hidden;
+}
+#main {
+	float: left;
+	width: 570px;
+}
+#sub {
+	float: right;
+	width: 230px;
+	margin-top: 380px;
+}
+footer {
+	clear: both;
+	padding-top: 70px;
+}
+#main h1 {
+	margin: 0;
+	padding: 10px 0 0px 65px;
+	font-size: 130%;
+	
+	background-repeat: no-repeat,
+			   no-repeat;
+	background-position: left top,     	/*１つ目の画像のポジション指定 左上*/
+			     left bottom;	/*２つ目の画像のポジション指定 左下*/
+	/*background: url(１個目の画像) no-repeat left top,
+		    url(２個目の画像) no-repeat left bottom; ショートハンド記述*/ 
+}
+#main h2 {
+	font-size: 150%;
+}
+#concept #nav_concept a,
+#plan #nav_plan a,
+#fair #nav_fair a,
+#contact #nav_contact a,
+nav ul li a:hover {
+	background-position: 0 -45px;
+}
+
+.bnr_inner a p img:hover { 	/*擬似クラスを使用している（ロールオーバー）*/
+	opacity: 0.8; 		/*マウスをポインタしたときにクリックで変化させることができる。*/
+}				/*opacityは数値は１を不透明として０を透明とする透過度を表す。*/
+
+
+#news ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+#news ul li {
+	padding: 20px 0 20px 175px;
+	border-bottom: 1px dotted #6c5f45;
+	text-indent: -175px;
+}
+#news ul time {
+	display: inline-block;
+	width: 175px;
+	font-weight: bold;
+	color: #6c5f45;
+	text-indent: 0;
+}
+
+/* 基本レイアウト ここまで↑ */
+
+
+
+/* section↓ */
+
+.concept_box {
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+.image_right {
+	float: right;
+	margin-left: 25px;
+}
+.image_left {
+	float: left;
+	margin-right: 25px;
+}
+.concept_box:last-child,    	/*擬似クラス(last-child)は<li>等の並びの最後の要素に適用する*/
+.concept_box p:last-child {
+	margin-bottom: 0;
+}
+/* section↑ */
+
+/* テーブル表示↓ */
+
+table{
+	border-collapse: collapse;
+}
+caption {
+	text-align: left;
+	margin-bottom: 30px;
+}
+caption p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+table th, table td {
+	padding: 15px;
+	border: 1px solid #6c5f45;
+}
+table tr th:first-child {
+	width: 70px;
+}
+table tbody th,
+table tbody td {
+	vertical-align: top;
+}
+table thead tr th {
+	background-color: #eee8cc;
+}
+table tbody tr:nth-child(odd) {	
+	background-color: #ffffff;
+}
+table tbody tr:nth-child(even) {
+	background-color: #f4f2f0;
+}
+
+
+/* テーブル表示↑ */
+
+
+
+

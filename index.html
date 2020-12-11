@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>竹場定弘　ポートフォリオサイト</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<header id="top">
+	<h1>
+		<a href="index.html">
+			<img src="images/mrs.png" alt="竹場定弘ポートフォリオサイト">
+		</a>
+	</h1>
+</header>
+<nav>
+	<ul>	<!--ここは結果的に画像でのリンクを貼っているがSEO対策でテキストも使っている-->
+		<li id="nav_concept"><a href="#about">about me</a></li>
+		<li id="nav_plan"><a href="#java">作品</a></li>
+		<li id="nav_fair"><a href="#kurou">苦労したこと・課題</a></li>
+		<li id="nav_contact"><a href="#detail">作品説明</a></li>
+	</ul>
+</nav>
+
+<div id="contents">
+	<div id="main">
+		
+		<section class="concept_box">
+			<h2 id="about">【Ａｂｏｕｔ　ｍｅ】</h2>
+			<h3>パーソナル情報</h3>
+			<p>竹場 定弘（たけば さだひろ）</p>
+			<p>1980年2月12日生まれ（40歳）</p>		
+			<p>趣味：ドライブ、自転車、ゲーム</p>		
+		</section>
+		<section class="concept_box">
+			<h2 id="java">【Ｊａｖａ作品】</h2>
+			<h3>制作経緯</h3>
+			<p>Java言語を基礎から学習し、トランプゲームで私の好きなブラックジャックゲームを制作したいと考え、そこで独学で習得したJavaのSwingによるGUIとデータベースを活用させたいと思い作成しました。</p>
+			<table>
+				<thead>		<!--テーブルのヘッダーとしてグループ化している-->
+					<tr>
+						<th scope="col">作品名</th>
+						<th scope="col">ブラックジャック</th>
+					</tr>
+				</thead>
+				<tbody>		<!--テーブルのボディーとしてグループ化している-->
+					<tr>
+						<th scope="row">制作期間</th>
+						<td>1ヶ月</td>
+					</tr>
+					<tr>
+						<th scope="row">実行動画</th>
+						<td>ローカル環境でXamppのMySQLデータベースへアクセスしている為プログラム実行の様子を撮影しYouTubeに動画を投稿しております。<br>YouTube動画リンク⇒</td>
+					</tr>
+					<tr>
+						<th scope="row">ソース</th>
+						<td>ソースコードをGitHubにて公開しております。<br>GitHubリンク⇒</td>
+					</tr>
+					
+				</tbody>	
+			</table>
+			<h3>機能</h3>
+			<p>通常のブラックジャックゲームにユーザー登録できるようにし、所持金をデータベースへゲーム終了時に毎回保存。ゲームを終了させても次回遊ぶときにログインすれば所持金を前回の状態のままゲームを続けることができる。また、起動時の「とにかくプレイ」を選択すればデータベースへ保存はされないがログイン等の手間を取らず、手軽にゲームをプレイすることができる。</p>
+			<br>
+			<h3 id="kurou">アプリ作成で苦労したこと</h3>
+			<p>・Swingを使うことは初めてだったのでSwingのGUIのパネルという概念やイベントリスナー、グラフィックパネルでの描画の画像や文字列の配置をうまく使えるようになるまでリファレンス等で検索したりし、命令文を理解するのに時間が掛かってしまった。</p>
+			<p>・Swingを使って作成して試しに実行したときにエラーが多発してうまく動作しなかったがJavaのバージョンの違っていたことが原因と判明し、バージョンを適正にすることでエラーを回避することができた。</p>
+			<h3>課題</h3>
+			<p>・グラフィック描写の画像表示時にちらつきがみられる時があるので改善したい。</p>
+			<p>・ソースコードでまとめられる処理や変数があると思うのでコードをもっと簡略化させたい。</p>
+		</section>
+		<section class="concept_box">
+			<h2 id="detail">【作品説明】</h2>
+			<h3>ブラックジャック</h3>
+			<p>1. プレイヤーとディーラーがシャッフルしたトランプ山札からカードを2枚ランダムで引きゲームスタート （初回のスタート時は所持金10000に設定）</p>
+			<p>2. ディーラーのカードのうち１枚は伏せられている</p>		
+			<p>3. プレイヤーは「ヒット」で更にカードを引き「スタンド」でカードを引かず確定する行動を選択</p>
+			<p>4. ディーラーは17以上の数字になる様にカードを機械的に引き続ける</p>		
+			<p>5. お互いの行動終了後、カードの数値を見せ合い、21に近い方が勝利</p>		
+			<p>6. 2枚配られた時点で21ちょうどの場合は「ブラックジャック」。この時は持ち札が3枚以上の通常21の数字よりも強い。掛け金の1.5倍の金額が支払われる</p>		
+			<p>7．10、Jack、Queen、Kingの4種は10として数えられ、Aは1or11の都合が良い方に自動選択</p>		
+		</section>
+
+	</div>
+					
+	<div id="sub">
+		<aside>
+			<div class="bnr_inner">
+				<dl>
+					<dt><iframe width= 100% src="https://www.youtube.com/embed/4jvY9k0CeRU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></dt>
+					<dd>YouTubeでのJava作品動画です。</dd>
+					<dd>全画面表示をおすすめ致します。</dd>
+				</dl>	
+			</div>
+			<div class="bnr_inner">
+			<a href="https://github.com/takezo427/takezo_java/tree/main/BlackJack/src/BlackJack2">
+				<dl>
+					<dt><img src="images/github.png" alt="ソースコード"></dt>
+					<dd>GitHubページへリンクします。</dd>
+				
+				</dl>
+			</a>
+			</div>
+		</aside>
+	</div>
+</div>
+<footer>
+	<p id="pagetop"><a href="#top">ページの先頭に戻る</a></p>
+	<address>竹場定弘　　〒880-0123　宮崎県宮崎市大字芳士1077－1県住102－6　電話　090-1193－4313</address>
+
+</footer>	
+</body>
+</html>
+
+趣味
